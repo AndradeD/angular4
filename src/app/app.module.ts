@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TaskListComponent } from './task-list/task-list.component';
+import { FormatCurrencyPipe } from './format-currency.pipe';
+import { FormatDatePipe } from './format-date.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TaskListComponent
+    TaskListComponent,
+    FormatCurrencyPipe,
+    FormatDatePipe
   ],
   imports: [
     BrowserModule,

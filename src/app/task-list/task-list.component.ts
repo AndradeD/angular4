@@ -10,7 +10,8 @@ export class TaskListComponent {
   tasks = [];
   task:Task = {
     name: "",
-    value: 0
+    value: 0,
+    date_launch: '2017-07-07'
   };
 
   addTask(){
