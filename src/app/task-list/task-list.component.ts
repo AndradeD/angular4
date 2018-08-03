@@ -1,22 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { TaskService } from '../task.service';
+import { Component } from '@angular/core';
 import {Task} from '../task';
 
 @Component({
-  selector: 'app-task-list',
+  selector: 'task-list',
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent {
-  tasks = [];
-  task:Task = {
-    name: "",
-    value: 0,
-    date_launch: '2017-07-07'
-  };
+  tasks:Array<Task>;
 
-  addTask(){
-    let task = Object.assign({},this.task);
-    this.tasks.push(task);    
+  constructor(private taskService:TaskService){
+    taskService.tasks.push({
+      name:'Cozinhar',
+      value:50,
+      date_launch:'2018/07/07'
+    })
+    this.tasks = this.taskService.tasks;
   }
 
 }
