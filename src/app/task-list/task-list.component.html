@@ -1,8 +1,0 @@
-<ul>  
-    <li *ngFor="let item of tasks" [myTask]="item">
-        {{ 
-            (item.name | uppercase) + ' - ' + 
-            (item.value | formatCurrency:'en-US') + ' - ' + 
-            (item.date_launch | formatDate:'en-US') }}
-    </li> 
-  </ul>
